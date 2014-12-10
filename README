@@ -1,0 +1,25 @@
+j2y(1) --  JSON-YAML converter
+==============================
+
+## SYNOPSIS
+
+ curl some/rest/api/url | j2y
+
+## DESCRIPTION
+
+Let's face it. JSON is not human readable in its basic dense format.
+But when testing a REST API with curl, that's exactly what you get.
+So why not convert it to nice human friendly YAML on the fly?
+
+y2j(1) --  YAML-JSON converter
+==============================
+
+## SYNOPSIS
+
+ y2j <foo.yml
+
+## DESCRIPTION
+
+I don't know why would you do that, but it felt natural to write the
+counterpart of j2y. I had to use the YAML::Syck parser with ImplicitTyping
+to keep numbers unquoted in the emitted JSON.
