@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+use JSON::XS;
+use YAML::Syck;
+$YAML::Syck::ImplicitTyping = 1;
+$y .= $_ while <>;
+$json = JSON::XS->new;
+print $json->encode(Load $y);

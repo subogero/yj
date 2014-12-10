@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+use JSON::XS;
+use YAML::Syck;
+$j .= $_ while <>;
+$json = JSON::XS->new;
+print Dump $json->decode($j);
